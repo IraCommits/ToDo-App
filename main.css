@@ -9,6 +9,7 @@ body {
 
 .container {
   position: absolute;
+  margin: 0 auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -16,6 +17,7 @@ body {
   padding: 20px 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
 }
 
 h2 {
@@ -55,30 +57,44 @@ button:hover {
 }
 
 #taskList {
-  list-style-type: none;
   padding: 0;
   margin: 0;
+  list-style: none;
+  width: 100%;
 }
 
 #taskList li {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #c5fcd3ea;
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 8px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  background: #fad1bd;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
-li.completed {
-  background-color: gainsboro;
+#taskList li span {
+  flex: 1;
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+#taskList li.completed {
+  background-color: rgb(217, 217, 238);
 }
 
 li.completed span {
   text-decoration: line-through;
   color: gray;
+
+  opacity: 0.4;
 }
 
 .delete-btn {
@@ -95,7 +111,7 @@ li.completed span {
 }
 
 #taskList input[type="checkbox"] {
-  transform: scale(1.5); 
+  transform: scale(1.7);
   cursor: pointer;
   accent-color: rgb(121, 207, 40);
 }
