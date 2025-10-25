@@ -1,0 +1,139 @@
+body {
+  background: radial-gradient(circle, #dd5d61, #f3c7ba);
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+}
+
+form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  margin-left: 15px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #d98ce9;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #b34aa5;
+  transform: scale(1.1);
+}
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#taskList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #c5fcd3ea;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+li.completed {
+  background-color: gainsboro;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+#taskList input[type="checkbox"] {
+  transform: scale(1.5); 
+  cursor: pointer;
+  accent-color: rgb(121, 207, 40);
+}
+
+#filters {
+  margin: 10px;
+  text-align: center;
+}
+#filters button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clearCompleted {
+  background-color: #f39c12;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}

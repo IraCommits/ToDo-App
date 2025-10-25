@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>ToDo App</h2>
+
+      <form id="todoForm">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Add something..."
+          autocomplete="off"
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <div id="filters">
+        <button data-filter="all" class="filter active">All</button>
+        <button data-filter="active" class="filter">Active</button>
+        <button data-filter="completed" class="filter">Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <div class="bottom-panel">
+        <p id="counter">Tasks in list: 0</p>
+        <button id="clearCompleted">Clear completed tasks</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
